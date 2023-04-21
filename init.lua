@@ -1,1 +1,1 @@
-require("the_primeagen")
+require("GoodGameRuler")
