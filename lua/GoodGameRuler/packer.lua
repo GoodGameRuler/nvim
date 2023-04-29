@@ -5,14 +5,18 @@ require('packer').startup(...)
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
+
+    -- Packer can manage itself
     use 'wbthomason/packer.nvim'
+
+    -- Telescope
     use {
 	    'nvim-telescope/telescope.nvim', tag = '0.1.1',
 	    -- or                            , branch = '0.1.x',
 	    requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+    -- Colorscheme Rosepine
     use({
 	    'rose-pine/neovim',
 	    as = 'rose-pine',
@@ -21,11 +25,22 @@ return require('packer').startup(function(use)
 	    end
     })
 
+    -- Treesitter
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+
+    -- 
     use('nvim-treesitter/playground')
+
+    -- A plugin that lets you pin files globally
     use('ThePrimeagen/harpoon')
+
+    -- Undotree shows undos and file historu
     use('mbbill/undotree')
+
+    --
     use('tpope/vim-fugitive')
+
+    -- LSP
     use {
 	    'VonHeikemen/lsp-zero.nvim',
 	    branch = 'v2.x',
@@ -47,15 +62,19 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- Surround plugin 
     use('tpope/vim-surround')
+
+    -- Comments
     use('tpope/vim-commentary')
-    use {
-        'glacambre/firenvim',
-        run = function() vim.fn['firenvim#install'](0) end
-    }   use('cohama/lexima.vim')
+
+    -- Autocompletion of parenthesis
+    use('cohama/lexima.vim')
 
     --  FML Plugin
     use('eandrju/cellular-automaton.nvim')
+
+    -- Copilot Plugin
     use {
         "zbirenbaum/copilot.lua",
         cmd = "Copilot",
@@ -68,6 +87,7 @@ return require('packer').startup(function(use)
         end,
     }
 
+    -- Adding copilot to the Autocomplete
     use {
         "zbirenbaum/copilot-cmp",
         after = { "copilot.lua" },
@@ -76,8 +96,17 @@ return require('packer').startup(function(use)
         end
     }
 
+    -- Autocomplete Code
     use('hrsh7th/nvim-cmp')
+
+    -- Vim Game to get better at vim
     use('ThePrimeagen/vim-be-good')
+
+    -- Preview markdown files
     use({ 'toppair/peek.nvim', run = 'deno task --quiet build:fast' })
+    use('lambdalisue/suda.vim')
+
+    -- R plugin for neovim
+    use('jalvesaq/Nvim-R')
 
 end)

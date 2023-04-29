@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/udit/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["Nvim-R"] = {
+    loaded = true,
+    path = "/home/udit/.local/share/nvim/site/pack/packer/start/Nvim-R",
+    url = "https://github.com/jalvesaq/Nvim-R"
+  },
   ["cellular-automaton.nvim"] = {
     loaded = true,
     path = "/home/udit/.local/share/nvim/site/pack/packer/start/cellular-automaton.nvim",
@@ -179,6 +184,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/udit/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
+  },
+  ["suda.vim"] = {
+    loaded = true,
+    path = "/home/udit/.local/share/nvim/site/pack/packer/start/suda.vim",
+    url = "https://github.com/lambdalisue/suda.vim"
   },
   ["telescope.nvim"] = {
     loaded = true,

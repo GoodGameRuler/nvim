@@ -46,3 +46,6 @@ vim.keymap.set("n", "<leader>vb", ":VimBeGood<CR>")
 vim.keymap.set("n", "<leader>md", ":MarkdownPreview<CR>")
 vim.api.nvim_create_user_command('PeekOpen', require('peek').open, {})
 vim.api.nvim_create_user_command('PeekClose', require('peek').close, {})
+
+-- Allow for sudo write
+vim.keymap.set("n", "<leader>ww", ":SudaWrite<CR>")
