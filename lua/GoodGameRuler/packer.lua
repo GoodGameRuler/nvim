@@ -81,20 +81,20 @@ return require('packer').startup(function(use)
         event = "InsertEnter",
         config = function()
             require('copilot').setup({
-                suggestion = { enabled = false },
+                suggestion = { enabled = true},
                 panel = { enabled = false },
             })
         end,
     }
 
     -- Adding copilot to the Autocomplete
-    use {
-        "zbirenbaum/copilot-cmp",
-        after = { "copilot.lua" },
-        config = function ()
-            require("copilot_cmp").setup()
-        end
-    }
+    -- use {
+    --     "zbirenbaum/copilot-cmp",
+    --     after = { "copilot.lua" },
+    --     config = function ()
+    --         require("copilot_cmp").setup()
+    --     end
+    -- }
 
     -- Autocomplete Code
     use('hrsh7th/nvim-cmp')
