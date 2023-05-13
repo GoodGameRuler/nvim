@@ -75,17 +75,17 @@ return require('packer').startup(function(use)
     use('eandrju/cellular-automaton.nvim')
 
     -- Copilot Plugin
-    use {
-        "zbirenbaum/copilot.lua",
-        cmd = "Copilot",
-        event = "InsertEnter",
-        config = function()
-            require('copilot').setup({
-                suggestion = { enabled = true},
-                panel = { enabled = false },
-            })
-        end,
-    }
+    -- use {
+    --     "zbirenbaum/copilot.lua",
+    --     cmd = "Copilot",
+    --     event = "InsertEnter",
+    --     config = function()
+    --         require('copilot').setup({
+    --             suggestion = { enabled = true},
+    --             panel = { enabled = false },
+    --         })
+    --     end,
+    -- }
 
     -- Adding copilot to the Autocomplete
     -- use {
