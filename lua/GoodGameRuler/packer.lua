@@ -109,4 +109,48 @@ return require('packer').startup(function(use)
     -- R plugin for neovim
     use('jalvesaq/Nvim-R')
 
+    -- Markdown
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
+
+    -- Nord Theme
+    use('shaunsingh/nord.nvim')
+
+    -- Airline - Status Bar
+    -- use('vim-airline/vim-airline')
+    -- use('vim-airline/vim-airline-themes') -- Themes for airline
+
+    -- Nerd Tree Alternative nvimtree
+    use('nvim-tree/nvim-tree.lua')
+
+    -- Icons
+    use('nvim-tree/nvim-web-devicons')
+
+    -- File lsp
+    use('antosha417/nvim-lsp-file-operations')
+
+    -- Lua Line - Status bar
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+
+
+    -- For md files
+    use('lukas-reineke/headlines.nvim')
+
+    -- require("packer").startup(
+    -- function()
+    --     use {
+    --         'lukas-reineke/headlines.nvim',
+    --         after = 'nvim-treesitter',
+    --         config = function()
+    --             require('headlines').setup()
+    --         end,
+    --     }
+    -- end
+    -- )
+
 end)
