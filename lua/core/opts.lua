@@ -55,8 +55,14 @@ o.pumwidth = 20
 o.wildmenu = true
 o.wildmode = {"lastused", "full", "noselect"}   -- how entries are cycled
 o.wildoptions = "pum"               -- show in popup menu
+o.termguicolors = true
 
 o.winborder = "rounded"
 -- o.winborder='+,-,+,|,+,-,+,|'
 
 require('vim._extui').enable({})
+
+vim.api.nvim_create_autocmd('FileType', {
+	pattern = { 'svelte', 'markdown', 'lua', 'rust', 'typescript', 'javascript', 'c', 'cpp', 'ocaml', 'tex', 'rust' },
+	callback = function() vim.treesitter.start() end,
+})

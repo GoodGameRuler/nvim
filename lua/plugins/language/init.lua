@@ -4,4 +4,3 @@ vim.pack.add({
 })
 require("plugins/language/lsp")
 require("plugins/language/pkg-mgr")
-require("plugins/language/treesitter")
