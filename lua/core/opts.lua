@@ -1,43 +1,62 @@
-vim.opt.nu = true
-vim.opt.relativenumber = true
+local o = vim.opt
+local bo = vim.bo
+o.nu = true
+o.relativenumber = true
 
-vim.opt.smartindent = true
-vim.opt.wrap = false
+o.smartindent = true
+o.wrap = false
 
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = true
+o.swapfile = false
+o.backup = false
+o.undodir = os.getenv("HOME") .. "/.vim/undodir"
+o.undofile = true
 
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
+o.hlsearch = false
+o.incsearch = true
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+o.tabstop = 4
+o.softtabstop = 4
+o.shiftwidth = 4
+o.expandtab = true
 
-vim.opt.scrolloff = 8
+o.scrolloff = 8
 vim.g.mapleader = " "
 
-vim.opt.foldmethod = "syntax"
-vim.opt.foldenable = false
-vim.opt.foldlevel = 99
+o.foldmethod = "syntax"
+o.foldenable = false
+o.foldlevel = 99
 
 -- Error bars don't keep moving when not there
 vim.o.signcolumn = "yes:3"
 
 -- Spell Check
-vim.opt.spelllang = "en_au"
-vim.opt.spell = false
+o.spelllang = "en_au"
+o.spell = false
 
 -- Local Leader
 vim.g.maplocalleader = "\\"
 
 -- LCS
--- vim.opt.listchars = {eol = '↵', trail = "_"}
--- vim.opt.list = true
+-- o.listchars = {eol = '↵', trail = "_"}
+-- o.list = true
 
 -- Aesthetics
-vim.opt.cursorline = true
-vim.opt.cursorlineopt = "line,number"
+o.cursorline = true
+o.cursorlineopt = "line,number"
+
+o.list = true -- show trailing characters
+o.backspace = "indent,eol,start"
+o.colorcolumn = "100"
+o.autocomplete = true
+o.completeopt = { "fuzzy", "menu", "menuone", "noinsert", "popup", "preview" }
+o.pumheight = 15
+o.pumwidth = 20
+
+o.wildmenu = true
+o.wildmode = {"lastused", "full", "noselect"}   -- how entries are cycled
+o.wildoptions = "pum"               -- show in popup menu
+
+o.winborder = "rounded"
+-- o.winborder='+,-,+,|,+,-,+,|'
+
+require('vim._extui').enable({})
