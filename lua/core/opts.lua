@@ -47,10 +47,10 @@ o.cursorlineopt = "line,number"
 o.list = true -- show trailing characters
 o.backspace = "indent,eol,start"
 o.colorcolumn = "100"
-o.autocomplete = true
+o.autocomplete = false
 o.completeopt = { "fuzzy", "menu", "menuone", "noinsert", "popup", "preview" }
-o.pumheight = 15
-o.pumwidth = 20
+-- o.pumheight = 15
+-- o.pumwidth = 20
 
 o.wildmenu = true
 o.wildmode = {"lastused", "full", "noselect"}   -- how entries are cycled
@@ -63,6 +63,6 @@ o.winborder = "rounded"
 require('vim._extui').enable({})
 
 vim.api.nvim_create_autocmd('FileType', {
-	pattern = { 'svelte', 'markdown', 'lua', 'rust', 'typescript', 'javascript', 'c', 'cpp', 'ocaml', 'tex', 'rust' },
+	pattern = { 'svelte', 'markdown', 'lua', 'rust', 'typescript', 'javascript', 'c', 'cpp', 'tex', 'rust' },
 	callback = function() vim.treesitter.start() end,
 })

@@ -9,6 +9,8 @@ vim.lsp.enable({
     "ts_ls",
     "zls",
     "ocamllsp",
+    "clangd",
+    "rust-analyzer",
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
